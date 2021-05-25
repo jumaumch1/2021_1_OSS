@@ -18,6 +18,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10
+      - name: Install electron-builder
+        run: yarn add electron-builder --dev 
 
       - name: Build/release Electron app
         uses: samuelmeuli/action-electron-builder@v1
