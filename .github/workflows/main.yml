@@ -24,7 +24,7 @@ jobs:
         run: npx electron-forge import
 
       - name: Build/release Electron app
-        run: npm run make
+        run: npm run release
         env:
           # GitHub token, automatically provided to the action
           # (No need to define this secret in the repo settings)
