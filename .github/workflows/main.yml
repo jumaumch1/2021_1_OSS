@@ -19,11 +19,13 @@ jobs:
         with:
           node-version: 12
       - name: Install electron-builder
-        run: yarn add electron-builder --dev 
+        run: npm install save dev @electron forge/cli
+      - name: forge
+        run: npx electron forge import
 
       - name: Build/release Electron app
-        uses: samuelmeuli/action-electron-builder@v1.6.0
-        with:
+        run: npm run make
+        env:
           # GitHub token, automatically provided to the action
           # (No need to define this secret in the repo settings)
           github_token: ${{ secrets.github_token }}
