@@ -21,8 +21,6 @@ jobs:
           npm-version: 6
       - name: Install electron-builder
         run: npm install electron-builder
-      - name: forge
-        run: npx electron-builder import
 
       - name: Build/release Electron app
         run: npm run release
