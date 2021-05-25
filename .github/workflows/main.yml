@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 12
       - name: Install electron-builder
-        run: npm install --save-dev electron-builder
+        run: npm install electron-builder
       - name: forge
         run: npx electron-forge import
 
